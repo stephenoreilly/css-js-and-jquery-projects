@@ -1,0 +1,332 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>BBC News</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        body{
+            margin: 0px;
+        }
+        #container{
+            
+        }
+        #topbar{
+            background-color: #FFF;
+            width: 100%;
+            height: 35px;
+            background-color: white;
+        }
+        .fixedwidth{
+            width: 1050px;
+            margin: 0 auto;
+            font-family: arial;
+        }
+        #logodiv{
+            padding-top: 5px;
+            padding-right: 5px;
+            float: left;
+            border-right: 1px solid #990000;
+        }
+        #logodiv img{
+             height: 27px;
+        }
+        #signin{
+            font-weight: bold;
+            font-size: 0.7em;
+            padding: 6px 80px 12px 20px;
+            padding-left: 20px;
+            height: 100%;
+            border-right: 1px solid grey;
+            float: left;
+        }
+        #signin img{
+            position: relative;
+            top: 4px;
+        }
+        #topmenu {
+            float: left;
+        }
+        #topmenu ul{
+            padding: 0;
+            margin-top: 0;
+        }
+        #topmenu li{
+            padding: 10px 20px 10px 20px;
+            list-style: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            border-right: 1px solid grey;
+            height: 100%;
+            float: left;
+        }
+        #searchdiv{
+            float: left;
+            padding: 5px 0 0 10px; 
+        }
+        #searchdiv input {
+            height: 25px;
+            border: none;
+            padding: 3px 0 3px 10px;
+            font-size: 0.9em;
+            background-color: grey;
+            padding-left: 10px;
+            background-image: url("images/magnifier.png");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+        .break{
+            clear:both;
+        }
+        #newsbar{
+            background-color: #990000;
+            width: 100%;
+            height: 90px;
+            color: white;
+        }
+        #newsbar p{
+            margin: 0;
+            padding: 0;
+            font-size: 3em;
+            padding-top: 10px;
+            float: left;
+        }
+        #uk {
+            font-size: 0.7em;
+            padding-left: 5px;
+        }
+        #newsheader{
+            font-size: 3em;
+        }
+        #rss{
+            float:right;
+            margin-top: 38px;
+        }
+        #rss img{
+            height: 14px;
+            margin-left: 3px;
+        }
+        #topicmenu{
+            
+        }
+        #topicmenu ul{
+            background-color: #3E0C0D;
+            padding: 5px 0 0 5px;
+            margin: 0;
+            height: 20px;
+        }
+        #topicmenu li{
+            list-style: none;
+            font-size: 0.9em;
+            border-right: 1px solid white;
+            float: left;
+            padding: 0 10px;
+        }
+        .selected{
+            background-color: white;
+            color: #666666;
+            height: 20px;
+            position: relative;
+            top: -4px;
+            padding-top: 4px !important;
+            
+        }
+        #content{
+            width: 100%;
+            height: 90px;
+            font-size: 0.75em;
+        }
+        h1 {
+            color: navy;
+            font-size: 2.5em;
+        }
+        #date{
+            font-weight: bold;
+            color: grey;
+        }
+        .headlineimage{
+            float: left;
+            width: 400px;
+        }
+        .newsitem{
+            position: relative;
+            top: -10px;
+            left: 10px;
+            width: 240px;
+            float: left;
+            font-size: 1.1em;
+        }
+        .newsitem a{
+            color: #1F4FB2;
+            text-decoration: none;
+        }
+        .newsitem a:hover{
+            text-decoration: underline;
+        }
+        .video {
+            padding-left: 35px;
+            background-image: url("images/triangle.png");
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        .links{
+            line-height: 1.6em;
+        }
+        #watchlisten{
+            width:380px;
+            background-color: #CCC;
+            float: right;
+            position: relative;
+            top: -70px;
+        }
+        h2{
+            color: #444;
+            margin: 10px 0 10px 10px;
+            font-size: 1.8em;
+        }
+        .boxes{
+            float: right;
+            margin: 10px 10px 0 0;
+        }
+        .leftarrow{
+            float: left;
+            border-left: 1px solid white;
+            height: 135px;
+        }
+        .wlblock{
+            float:left;
+            background-color: #111;
+            width: 157px;
+            position: relative;
+        }
+        .wlblock img{
+            width: 157px;
+        }
+        .wlblock a{
+            color: white;
+        }
+        .wlblock p{
+            padding: 0;
+            margin: 10px;
+        }
+        .wlblock ul{
+            margin: 0;
+            padding:10px;
+            
+        }
+        #watchlisten li{
+            list-style: none;
+            padding: 10px 0 10px 50px;
+            background-image: url("images/triangle.png");
+            background-repeat: no-repeat;
+            background-position: left center;
+            font-size: 1.2em;
+        }
+        .bb{
+            border-bottom: 1px solid  #DDDDDD ;
+        }
+        
+    </style>    
+</head>
+
+<body>
+    <div id="container">
+        <div id="topbar">
+            <div class="fixedwidth"> 
+                <div id="logodiv">
+                    <img src="images/bbclogo.png"/>
+                </div>  
+                <div id="signin">
+                    <img src="images/sign.png" height=15px /> Sign In
+                </div>
+                <div id="topmenu">
+                    <ul>
+                        <li>News</li>
+                        <li>Sport</li>
+                        <li>Weather</li>
+                        <li>iPlayer</li>
+                        <li>TV</li>
+                        <li>Radio</li>
+                        <li>More....</li>
+                    </ul>
+                </div>
+                <div id="searchdiv">
+                    <input type="text" placeholder="Search" />
+                </div>
+            </div>
+            
+        </div>
+        <div class="break"></div>
+        <div id="newsbar">
+            <div class="fixedwidth"> 
+                
+                <p id="newsheader">NEWS
+                    <span id="uk">UK</span>
+                </p>
+                <div id="rss">
+                    RSS<img src="images/rss.png">
+                </div>
+                <div class="break"></div>
+                <div id="topicmenu">
+                    <ul>
+                        <li>Home</li>
+                        <li>World</li>
+                        <li class="selected">UK</li>
+                        <li>England</li>
+                        <li>Scotland</li>
+                        <li>Wales</li>
+                        <li>Business</li>
+                        <li style="border-right:none">Entertainment & Arts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="break"></div>
+        <div id="content">
+            <div class="fixedwidth"> 
+                <div id="date">13 September 2015 Last updated at 15:23</div>
+                <h1>Chemical team sent to China blast site</h1>
+                <img class="headlineimage" src="images/headlineimage.jpg" />
+                <div class="newsitem">
+                    <p>China has sent a team of military specialists in handling chemicals to the northern city of Tianjin, after warehouse explosions left at least 50 dead, state media report.
+                        The blasts, late on Wednesday night, ripped through an industrial port area, destroying buildings, shipping containers and thousands of new cars.
+                        It is not known what caused the blasts, nor whether chemicals have leaked.
+                        More than 3,500 residents are spending the night in temporary shelters.
+                    </p>
+                    <p class="links">
+                         <a class ="video" href="">Drone footage shows aftermath</a><br />
+                         <a class ="video" href="">What we know so far</a><br />
+                         <a href="">Pictures reveal devastation</a><br />
+                         <a class ="video" href="">Anger at 'disgraceful' coverage</a><br />
+                    </p>
+                </div>
+                <div id="watchlisten">
+                    <img src="images/boxes.png" class="boxes" />
+                    <h2>Watch/Listen</h2>
+                    <img src="images/leftarrow.png" class="leftarrow" />
+                    <div class="wlblock">
+                        <img src="images/pic1.png"/>
+                        <p><a href="">Titanic letter worth millions</a></p>
+                        
+                    </div>
+                    <div class="wlblock">
+                        <img src="images/pic2.png"/>
+                        <p><a href="">Titanic letter worth millions</a></p>
+                        
+                    </div>
+                    <img src="images/rightarrow.png" class="leftarrow" />
+                    <div class="break"></div>
+                    <ul>
+                        <li class="bb"><a href="">BBC News Channel</a></li>
+                        <li class="bb"><a href="">Radio 5 Live</a></li>
+                        <li><a href="">Osborne Questioned on budget</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
